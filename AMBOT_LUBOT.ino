@@ -101,14 +101,14 @@ void loop() {
     // int ch15Raw = channels[14]; // CH15
     // int ch16Raw = channels[15]; // CH16
 
-    int moveFB = ch2Raw;
     int moveLR = ch1Raw;
+    int moveFB = ch2Raw;
     int headPan_in = ch4Raw;
     int headTilt_in = ch3Raw;
     
 
-    int leftPulse = map(moveLR, 172, 1809, 1000, 2000);
-    int rightPulse = map(moveFB, 172, 1809, 1000, 2000);
+    int rightPulse = map(moveLR, 172, 1809, 1000, 2000);
+    int leftPulse = map(moveFB, 172, 1809, 1000, 2000);
     int tiltPulse = map(headTilt_in, 172, 1809, 180, 0);
     int panPulse = map(headPan_in, 172, 1809, 180, 0);
 
